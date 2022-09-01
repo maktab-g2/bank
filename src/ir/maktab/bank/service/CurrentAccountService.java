@@ -10,4 +10,8 @@ public class CurrentAccountService implements AccountService {
     public void withdraw() {
 
     }
+
+    public void checkCategory(){
+
+    }
 }
