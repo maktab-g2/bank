@@ -1,4 +1,6 @@
 package ir.maktab.bank.service;
 
-public class AccountService {
+public interface AccountService {
+    void deposit();
+    void withdraw();
 }
