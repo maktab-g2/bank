@@ -57,9 +57,9 @@ import java.util.Scanner;
                         case 2:
                             System.out.println("thank you for open this account!");
                         case 3:
-                            System.out.println("for get profit, you should get your money after one year");
+                            System.out.println("you can get your 20% profit after one year!");
                         case 4:
-                            System.out.println("for get profit, you should get your money after 3 month");
+                            System.out.println("you can get your 20% profit after 3 month!");
                     }
                     System.out.println("your registering finished.");
                     System.out.println("your credit card number is :" + creditCard.getCardNumber());
