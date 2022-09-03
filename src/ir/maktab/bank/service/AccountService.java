@@ -1,23 +1,27 @@
 package ir.maktab.bank.service;
 
-public abstract class AccountService {
-    private double total = 10e+3;
+import ir.maktab.bank.model.Account;
+import ir.maktab.bank.model.Customer;
 
-    void withdrawn(String name, int withdrawal) {
-        if (total >= withdrawal) {
-            System.out.println(name + " withdrawn " + withdrawal);
-            total = total - withdrawal;
-            System.out.println("Balance after withdrawal: " + total);
+public abstract class AccountService {
+    private double inventory = 10e+3;
+
+    void withdrawn(Customer customer, int withdrawal) {
+        inventory = customer.getAccount().getCreditCard().getCredit();
+        if (inventory >= withdrawal) {
+            System.out.println(customer.getName() + " withdrawn " + withdrawal);
+            customer.getAccount().getCreditCard().setCredit(inventory - withdrawal);
+            System.out.println("Balance after withdrawal: " + customer.getAccount().getCreditCard().getCredit());
         } else {
-            System.out.println(name
+            System.out.println(customer.getName()
                     + " you can not withdraw " + withdrawal);
-            System.out.println("your balance is: " + total);
+            System.out.println("your balance is: " + inventory);
         }
     }
 
-    void deposit(String name, int deposit) {
-        System.out.println(name + " deposited " + deposit);
-        total = total + deposit;
-        System.out.println("Balance after deposit: " + total);
+    void deposit(Customer customer, int deposit) {
+        System.out.println(customer.getName() + " deposited " + deposit);
+        inventory = customer.getAccount().getCreditCard().getCredit() + deposit;
+        System.out.println("Balance after deposit: " + inventory);
     }
 }
