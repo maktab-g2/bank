@@ -12,6 +12,7 @@ public abstract class Account {
         this.creditCard = creditCard;
         this.branch = branch;
     }
+    public Account(){};
 
     public int getId() {
         return id;

@@ -10,6 +10,7 @@ public class CreditCard {
         this.cardNumber = cardNumber;
         this.credit = credit;
     }
+    public CreditCard(){};
 
     public int getId() {
         return id;

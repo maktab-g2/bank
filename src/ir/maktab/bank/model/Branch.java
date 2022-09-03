@@ -21,6 +21,7 @@ public class Branch {
         }
         this.location = location;
     }
+    public Branch(){};
 
     public int getId() {
         return id;
