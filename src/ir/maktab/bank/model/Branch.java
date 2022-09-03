@@ -4,8 +4,9 @@ public class Branch {
     private int id;
     private String city;
     private int quality;
+    private Location location;
 
-    Branch(int id, String city, int quality) {
+    Branch(int id, String city, int quality, Location location) {
         this.id = id;
         this.city = city;
         if (quality == 1 || quality == 2 || quality == 3)
@@ -14,6 +15,7 @@ public class Branch {
             System.out.println("The Branch quality out of range. So we replaced it with the lowest amount of quality!");
             this.quality = 3;
         }
+        this.location = location;
     }
 
     public int getId() {
@@ -35,12 +37,13 @@ public class Branch {
     public int getQuality() {
         return quality;
     }
+
     public void setQuality(int quality) {
         if (quality == 1 || quality == 2 || quality == 3)
             this.quality = quality;
         else {
             System.out.println("The Branch quality out of range. So we replaced it with the lowest amount of quality!");
-            this.quality =3;
+            this.quality = 3;
         }
     }
 
