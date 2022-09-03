@@ -1,13 +1,5 @@
 package ir.maktab.bank.service;
 
-public class ShortTermAccountService implements AccountService{
-    @Override
-    public void deposit() {
+public class ShortTermAccountService extends AccountService{
 
-    }
-
-    @Override
-    public void withdraw() {
-
-    }
 }

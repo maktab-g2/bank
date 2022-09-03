@@ -1,13 +1,5 @@
 package ir.maktab.bank.service;
 
-public class LongTermAccountService implements AccountService{
-    @Override
-    public void deposit() {
+public class LongTermAccountService extends AccountService{
 
-    }
-
-    @Override
-    public void withdraw() {
-
-    }
 }
