@@ -1,10 +1,14 @@
 package ir.maktab.bank.model;
 
+import java.util.ArrayList;
+
 public class Branch {
     private int id;
     private String city;
     private int quality;
     private Location location;
+
+    private ArrayList<Customer> customerArrayList;
 
     Branch(int id, String city, int quality, Location location) {
         this.id = id;
@@ -36,6 +40,14 @@ public class Branch {
 
     public int getQuality() {
         return quality;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     public void setQuality(int quality) {
