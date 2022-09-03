@@ -49,6 +49,18 @@ import java.util.Scanner;
                     creditCard.setCredit(scanner.nextDouble());
                     long randomCard = MIN_CARD + (long) (Math.random() * (MAX_CARD - MIN_CARD));
                     creditCard.setCardNumber(String.valueOf(randomCard));
+                    System.out.println("Chose the type of Account: \n 1. Current \n 2. Loan \n 3. LongTerm \n 4. ShortTerm");
+                    switch (scanner.nextInt())
+                    {
+                        case 1:
+                            System.out.println("do you want check?");
+                        case 2:
+                            System.out.println("thank you for open this account!");
+                        case 3:
+                            System.out.println("for get profit, you should get your money after one year");
+                        case 4:
+                            System.out.println("for get profit, you should get your money after 3 month");
+                    }
                     System.out.println("your registering finished.");
                     System.out.println("your credit card number is :" + creditCard.getCardNumber());
                     long randomAccount = MIN_ACCOUNT + (long) (Math.random() * (MAX_ACCOUNT - MIN_ACCOUNT));
